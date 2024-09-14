@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8071/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+jwt:
+  secret: 2FCD04140948DAB17FC33D4F3C91EABDF5E78418367A0968B74C3CB23662850BB5BF2A78F5E19901F5DAC20977E55026922176509C2D53CB4E735BBB993DC456
+  expriation: 84600
+
+server:
+  port: 8070

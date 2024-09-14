@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/crm?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    generate-ddl: true
+    open-in-view: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8071/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+server:
+  port: 8073
+
+secret:
+  key: C1CB24C1519265022D2369B2FC1692268606ECD3891CC8781366426C9EBE5E242A34D29929FF3F9599745FAAF38B3B7A42C717084FC0C2948A461F6E86F3AED8
